@@ -1,0 +1,221 @@
+/* Allgemeine Stile */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #e0caca;
+  color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Stile für den Container mit Border und Regenbogen-Schatten */
+.mainContainer {
+  border: 2px solid #ccc; /* Border um den Container */
+  padding: 20px; /* Innenabstand innerhalb des Containers */
+  position: relative; /* Positionierung für den Schatten */
+  margin-left: 20px; /* Abstand auf der linken Seite */
+  margin-right: 80px; /* Abstand auf der rechten Seite */
+}
+
+/* Stile für den Regenbogen-Schatten */
+.mainContainer::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Schatten über dem Border platzieren */
+  left: -10px; /* Schatten links vom Border platzieren */
+  right: -10px; /* Schatten rechts vom Border platzieren */
+  bottom: -10px; /* Schatten unter dem Border platzieren */
+  z-index: -1; /* Schatten hinter dem Inhalt platzieren */
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  border-radius: 10px; /* Runde Ecken für den Schatten */
+  filter: blur(8px); /* Weichzeichnen des Schattens */
+}
+
+#cartInfo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url('assets/warenkorb-symbol.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Stile für das Warenkorb-Symbol */
+#cartIcon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url('assets/warenkorb-symbol.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+/* Stile für das Dropdown-Menü */
+#cartDropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  border: 1px solid #ccc;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Zeige das Dropdown-Menü beim Hover über das Warenkorb-Symbol */
+#cartIcon:hover #cartDropdown {
+  display: block;
+}
+
+/* Stile für die Liste der Warenkorbartikel */
+#cartItemsDropdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Stile für die einzelnen Artikel im Dropdown-Menü */
+#cartItemsDropdown li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Stile für den Gesamtpreis im Dropdown-Menü */
+#totalPriceDropdown {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+#cartSection {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: none; /* Versteckt bis zum Hover */
+  z-index: 10;
+}
+
+#cartInfo:hover #cartSection {
+  display: block;
+}
+
+#cartItems {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#cartItems li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#totalPrice {
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+/* Produktliste */
+#productList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#productList .product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Lässt die Elemente gleichmäßig im Container verteilen */
+}
+
+#productList .product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#productList .product h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+#productList .product .price {
+  color: #e63946;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+#productList .product .description {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  flex-grow: 1; /* Ermöglicht der Beschreibung, den verfügbaren Platz zu füllen, sodass der Button nach unten gedrückt wird */
+  display: flex;
+  align-items: flex-start; /* Stellt sicher, dass die Textbeschreibung am oberen Rand ausgerichtet bleibt */
+}
+
+#productList .product button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+#productList .product button:hover {
+  background-color: #0056b3;
+}
+
+#productList .product button:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  #productList {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product {
+    width: 90%;
+  }
+}
