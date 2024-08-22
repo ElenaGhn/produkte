@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfab9ec6-0aa8-4904-9719-2e15333bcd78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/produkteMain/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/produkteMain/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/produkteMain/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/produkteMain/warenkorb.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/produkteMain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/produkteMain/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produkteMain/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/produkteMain/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +42,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ghencea/Projekten_Elena/produkte",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/ghencea/Projekten_Elena/portfolio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724231105929</updated>
       <workItem from="1724231106980" duration="8802000" />
-      <workItem from="1724307565516" duration="16724000" />
+      <workItem from="1724307565516" duration="17626000" />
     </task>
     <servers />
   </component>
