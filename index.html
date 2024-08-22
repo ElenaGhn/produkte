@@ -8,25 +8,26 @@
 </head>
 <body>
 <header>
-    <h1>Unsere Produkte</h1>
-    <div id="cartInfo">
-        <div id="cartIcon">
-            <div id="cartDropdown">
-                <h2>Warenkorb</h2>
-                <ul id="cartItemsDropdown"></ul>
-                <p id="totalPriceDropdown">Gesamtpreis: €0.00</p>
-            </div>
-        </div>
-    </div>
+    <h1>Genuss<span>Markt</span></h1>
     <div id="cartSection">
-        <h2>Warenkorb</h2>
-        <ul id="cartItems"></ul>
-        <p id="totalPrice">Gesamtpreis: €0.00</p>
+        <button id="cartButton">Warenkorb</button>
+        <div id="cartDetails">
+            <h2>Warenkorb</h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice">Gesamtpreis: €0.00</p>
+        </div>
     </div>
 </header>
 <main class="mainContainer">
+    <div id="filterContainer">
+        <button class="filterBtn" data-filter="all">Alle</button>
+        <button class="filterBtn" data-filter="obst">Obst</button>
+        <button class="filterBtn" data-filter="gemuese">Gemüse</button>
+        <button class="filterBtn" data-filter="lebensmittel">Lebensmittel</button>
+    </div>
     <section id="productList">
-        <article class="product">
+        <!-- Obst -->
+        <article class="product" data-category="obst">
             <img src="assets/apple.jpg" alt="Apfel">
             <h2>Apfel</h2>
             <p class="price">€1.99</p>
@@ -34,98 +35,220 @@
             <button class="addToCartBtn">In den Warenkorb</button>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/arbutus.jpg" alt="Erdbeerbaumfrucht">
             <h2>Erdbeerbaumfrucht</h2>
             <p class="price">€2.99</p>
             <p class="description">Köstliche Früchte des Erdbeerbaums, ideal für Marmeladen und Desserts.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="gemuese">
             <img src="assets/avocado.jpg" alt="Avocado">
             <h2>Avocado</h2>
             <p class="price">€2.49</p>
             <p class="description">Samtige Avocados für cremige Guacamole.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/banana.jpg" alt="Banane">
             <h2>Banane</h2>
             <p class="price">€1.29</p>
             <p class="description">Süße Bananen für einen schnellen Energieschub.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/cherries.jpg" alt="Kirschen">
             <h2>Kirschen</h2>
             <p class="price">€3.99</p>
             <p class="description">Zarte Kirschen mit vollmundigem Geschmack.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/lemon.jpg" alt="Zitrone">
             <h2>Zitrone</h2>
             <p class="price">€1.69</p>
             <p class="description">Erfrischende Zitronen für den extra Zitrus-Kick.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/lime.jpg" alt="Limette">
             <h2>Limette</h2>
             <p class="price">€1.49</p>
             <p class="description">Spritzige Limetten für ein frisches Aroma.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/orange.jpg" alt="Orange">
             <h2>Orange</h2>
             <p class="price">€2.19</p>
             <p class="description">Ein vitaminreicher Snack für zwischendurch.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/papaya.jpg" alt="Papaya">
             <h2>Papaya</h2>
             <p class="price">€3.49</p>
             <p class="description">Tropische Papayas mit exotischem Geschmack.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/peach.jpg" alt="Pfirsich">
             <h2>Pfirsich</h2>
             <p class="price">€2.29</p>
             <p class="description">Saftige Pfirsiche für ein sommerliches Geschmackserlebnis.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/pineapple.jpg" alt="Ananas">
             <h2>Ananas</h2>
             <p class="price">€3.99</p>
             <p class="description">Süße Ananas mit einem Hauch von Tropen.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/pomegranate.jpg" alt="Granatapfel">
             <h2>Granatapfel</h2>
             <p class="price">€4.29</p>
             <p class="description">Saftige Granatäpfel voller knackiger Kerne.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/raspberries.jpg" alt="Himbeeren">
             <h2>Himbeeren</h2>
             <p class="price">€2.99</p>
             <p class="description">Frische Himbeeren mit einem köstlich fruchtigen Aroma.</p>
-            <button class="addToCartBtn">In den Warenkorb</button>        </article>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
 
-        <article class="product">
+        <article class="product" data-category="obst">
             <img src="assets/strawberry.jpg" alt="Erdbeeren">
             <h2>Erdbeeren</h2>
             <p class="price">€3.29</p>
             <p class="description">Süße Erdbeeren für ein fruchtiges Geschmackserlebnis.</p>
             <button class="addToCartBtn">In den Warenkorb</button>
         </article>
+
+        <!-- Gemüse -->
+        <article class="product" data-category="gemuese">
+            <img src="assets/bell-peppers.jpg" alt="Paprika">
+            <h2>Paprika</h2>
+            <p class="price">€2.49</p>
+            <p class="description">Frische Paprika, perfekt für Salate und Pfannengerichte.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="gemuese">
+            <img src="assets/carrots.jpg" alt="Karotten">
+            <h2>Karotten</h2>
+            <p class="price">€1.29</p>
+            <p class="description">Knackige Karotten für gesunde Snacks und Mahlzeiten.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="gemuese">
+            <img src="assets/cucumbers.jpg" alt="Gurken">
+            <h2>Gurken</h2>
+            <p class="price">€1.99</p>
+            <p class="description">Frische Gurken, perfekt für Salate und Sandwiches.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="gemuese">
+            <img src="assets/onion.jpg" alt="Zwiebeln">
+            <h2>Zwiebeln</h2>
+            <p class="price">€0.99</p>
+            <p class="description">Vielseitige Zwiebeln, ideal zum Kochen und Braten.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="gemuese">
+            <img src="assets/potato.jpg" alt="Kartoffeln">
+            <h2>Kartoffeln</h2>
+            <p class="price">€1.99</p>
+            <p class="description">Sättigende Kartoffeln für viele leckere Gerichte.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="gemuese">
+            <img src="assets/tomatos.jpg" alt="Tomaten">
+            <h2>Tomaten</h2>
+            <p class="price">€2.29</p>
+            <p class="description">Saftige Tomaten für frische Salate und Saucen.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="gemuese">
+            <img src="assets/zucchini.jpg" alt="Zucchini">
+            <h2>Zucchini</h2>
+            <p class="price">€2.19</p>
+            <p class="description">Zarte Zucchini, perfekt zum Grillen und Braten.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <!-- Lebensmittel -->
+        <article class="product" data-category="lebensmittel">
+            <img src="assets/bread.jpg" alt="Brot">
+            <h2>Brot</h2>
+            <p class="price">€2.49</p>
+            <p class="description">Frisches Brot aus der Bäckerei, knusprig und lecker.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="lebensmittel">
+            <img src="assets/cheeses.jpg" alt="Käse">
+            <h2>Käse</h2>
+            <p class="price">€4.49</p>
+            <p class="description">Feiner Käse für jeden Anlass, von mild bis würzig.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="lebensmittel">
+            <img src="assets/milk.jpg" alt="Milch">
+            <h2>Milch</h2>
+            <p class="price">€1.09</p>
+            <p class="description">Frische Milch, reich an Kalzium und Vitaminen.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="lebensmittel">
+            <img src="assets/olive-oil.jpg" alt="Olivenöl">
+            <h2>Olivenöl</h2>
+            <p class="price">€6.99</p>
+            <p class="description">Hochwertiges Olivenöl, ideal für Dressings und zum Kochen.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="lebensmittel">
+            <img src="assets/rice.jpg" alt="Reis">
+            <h2>Reis</h2>
+            <p class="price">€2.39</p>
+            <p class="description">Vielseitiger Reis, perfekt als Beilage oder Hauptgericht.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
+
+        <article class="product" data-category="lebensmittel">
+            <img src="assets/water.jpg" alt="Wasser">
+            <h2>Wasser</h2>
+            <p class="price">€0.79</p>
+            <p class="description">Erfrischendes Mineralwasser für den täglichen Durst.</p>
+            <button class="addToCartBtn">In den Warenkorb</button>
+        </article>
     </section>
+    <div id="pagination">
+        <button id="prevPageBtn">Vorherige Seite</button>
+        <button id="nextPageBtn">Nächste Seite</button>
+    </div>
 </main>
 <script src="script.js"></script>
 </body>
