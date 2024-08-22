@@ -195,3 +195,13 @@ header h1 span {
 #prevPageBtn:hover, #nextPageBtn:hover {
   background-color: #004d40;
 }
+
+
+.aboutUs {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid #00796b;
+  background-color:#003d33;
+  color: #dddddd;
+}
