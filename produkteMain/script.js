@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Pagination Logic
     let currentPage = 1;
-    const totalPages = 5; // Adjust as needed
+    const totalPages = 5;
 
     function updatePagination() {
         document.getElementById('prevPageBtn').disabled = (currentPage === 1);
