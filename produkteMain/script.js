@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartItems = document.getElementById('cartItems');
     const totalPriceElement = document.getElementById('totalPrice');
     const filterButtons = document.querySelectorAll('.filterBtn');
-    const products = Array.from(document.querySelectorAll('.product')); // Convert NodeList to Array
-
+    const products = Array.from(document.querySelectorAll('.product'));
     const itemsPerPage = 10;
     let currentPage = 1;
-    let visibleProducts = []; // Array to keep track of visible products after filtering
+    let visibleProducts = [];
 
     function updateCart() {
         cartItems.innerHTML = '';
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return false;
             }
         });
-        currentPage = 1; // Reset to first page after filtering
+        currentPage = 1;
         loadPage(currentPage);
         updatePagination();
     }
@@ -109,9 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('prevPageBtn').addEventListener('click', goToPreviousPage);
     document.getElementById('nextPageBtn').addEventListener('click', goToNextPage);
 
-    // Initialize
     initializeAddToCartButtons();
-    updateCart(); // Ensure cart is updated when the page loads
-    applyFilter('all'); // Apply initial filter
+    updateCart();
+    applyFilter('all');
     cartButton.addEventListener('click', toggleCartDetails);
 });
